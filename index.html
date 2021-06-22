@@ -43,11 +43,28 @@
       <nav id="nav">
         <div class="container-fluid">
           <div class="logo"><a href="/"></a></div>
+          <div class="share">
+            <div class="btn-group"><a class="btn telegram" href="https://telegram.me/share/url?url=https://www.theinitium.com/project/initium_plus/&amp;text=守護新聞的獨立性，就是守護你我的獨立性" target="_blank">telegram</a><a class="btn twitter" href="https://twitter.com/intent/tweet?url=https://www.theinitium.com/project/initium_plus/&amp;text=守護新聞的獨立性，就是守護你我的獨立性" target="_blank">twitter</a><a class="btn facebook" href="https://www.facebook.com/sharer.php?u=https://www.theinitium.com/project/initium_plus/" target="_blank">facebook</a><a class="btn line" href="https://lineit.line.me/share/ui?url=https://www.theinitium.com/project/initium_plus/&amp;text=守護新聞的獨立性，就是守護你我的獨立性" target="_blank">line</a>
+              <input id="copyInput" type="text" value="守護新聞的獨立性，就是守護你我的獨立性 https://www.theinitium.com/project/initium_plus/">
+              <button class="btn link" href="#" target="_blank" onclick="copyText()">link</button>
+              <script>
+                function copyText() {
+                	var text= document.getElementById("copyInput");
+                	text.select();
+                	text.setSelectionRange(0, 99999)
+                	document.execCommand("copy");
+                }
+              </script>
+            </div>
+          </div>
         </div>
       </nav>
       <main class="index" id="main">
         <section class="intro">
           <div class="container">
+            <div class="illu">
+              <figure><img class="img-fluid d-none d-lg-block" src="img/intro@2x.png"><img class="img-fluid d-lg-none" src="img/intro.png"></figure>
+            </div>
             <div class="title">
               <h1 class="serif">加入端Plus會員</h1>
               <h2 class="serif">守護新聞的獨立性，守護你我的獨立性</h2>
@@ -60,11 +77,14 @@
                 </div>
               </div>
             </div>
-            <div class="btn-group"><a class="btn btn-block" href="/subscription/checkout/initium_plus/">每月 139 HKD，支持獨立新聞</a><a class="btn btn-underline" href="/subscription/offers">了解其他會員方案</a><small>年計費，一年 1668 HKD。採自動續費，隨時可取消</small></div>
+            <div class="btn-group"><a class="btn btn-block" href="https://theinitium-develop.initiumlab.com/subscription/checkout/initium_plus/">每月 139 HKD，支持獨立新聞</a><a class="btn btn-underline" href="https://theinitium-develop.initiumlab.com/subscription/offers">了解其他會員方案</a><small>年計費，一年 1668 HKD。採自動續費，隨時可取消</small></div>
           </div>
         </section>
         <section class="benefit">
           <div class="container">
+            <div class="illu">
+              <figure><img class="img-fluid d-none d-lg-block" src="img/benefit@2x.png"><img class="img-fluid d-lg-none" src="img/benefit.png"></figure>
+            </div>
             <div class="title">
               <h3 class="serif">成為端Plus會員，您可以：</h3>
             </div>
@@ -83,11 +103,14 @@
                 <li>獲得「當今大馬 Malaysiakini」中英全語種會籍（原價500港幣/年）</li>
               </ul>
             </div>
-            <div class="btn-group"><a class="btn btn-block" href="/subscription/checkout/initium_plus/">每月 139 HKD，支持獨立新聞</a><small>年計費，一年 1668 HKD。採自動續費，隨時可取消</small></div>
+            <div class="btn-group"><a class="btn btn-block" href="https://theinitium-develop.initiumlab.com/subscription/checkout/initium_plus/">每月 139 HKD，支持獨立新聞</a><small>年計費，一年 1668 HKD。採自動續費，隨時可取消</small></div>
           </div>
         </section>
         <section class="report">
           <div class="container">
+            <div class="illu">
+              <figure><img class="img-fluid d-none d-lg-block" src="img/report@2x.png"><img class="img-fluid d-lg-none" src="img/report.png"></figure>
+            </div>
             <div class="title">
               <h3 class="serif">端傳媒與獨立記者合作的報導</h3>
             </div>
@@ -138,7 +161,7 @@
           </div>
         </section>
         <section class="faq">
-          <div class="container"> 
+          <div class="container">
             <div class="content">
               <div class="row">
                 <div class="col-9">
@@ -156,12 +179,5 @@
         <div class="container"></div>
       </footer>
     </div>
-    <script src="js/app.min.js"></script>
-    <script>
-      window.onload = function() {
-          global.init();
-          index.init();
-      }
-    </script>
   </body>
 </html>
